@@ -30,7 +30,8 @@ class CalcularViewController: UIViewController {
         let altura = sliderAltura.value
         let peso = sliderPeso.value
         let imc = peso/pow(altura, 2)
-        print(imc)
+        
+        performSegue(withIdentifier: "irAResultado", sender: self)
     }
 }
 
