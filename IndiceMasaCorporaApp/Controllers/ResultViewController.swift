@@ -20,5 +20,6 @@ class ResultViewController: UIViewController {
 
     }
     @IBAction func recalcularPresionado(_ sender: UIButton) {
+        dismiss(animated: true)
     }
 }
