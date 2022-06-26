@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalcularViewController: UIViewController {
     @IBOutlet weak var labelAltura: UILabel!
     @IBOutlet weak var labelPeso: UILabel!
     @IBOutlet weak var sliderAltura: UISlider!
