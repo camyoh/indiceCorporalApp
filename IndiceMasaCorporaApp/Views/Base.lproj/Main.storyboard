@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="19" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="SPh-0R-o91">
             <objects>
-                <viewController id="AGt-ZL-1aO" sceneMemberID="viewController">
+                <viewController id="AGt-ZL-1aO" customClass="ResultViewController" customModule="IndiceMasaCorporaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="npQ-qj-dML">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,6 +177,9 @@
                                 <state key="normal" title="RECALCULAR">
                                     <color key="titleColor" red="0.38340726489999999" green="0.37528270479999998" blue="0.61475604770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="recalcularPresionado:" destination="AGt-ZL-1aO" eventType="touchUpInside" id="z7E-cX-Ys5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PdU-Wc-Tcc"/>
@@ -193,6 +196,10 @@
                             <constraint firstItem="Aca-PS-0ym" firstAttribute="centerY" secondItem="npQ-qj-dML" secondAttribute="centerY" id="xL4-g9-AAY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelConsejo" destination="8xr-lc-Wnr" id="u4i-KL-q1h"/>
+                        <outlet property="labelIMC" destination="Gny-3M-2Rm" id="CUU-iB-05w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YA-cW-4cb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
