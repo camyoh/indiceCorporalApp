@@ -101,6 +101,9 @@
                                         <state key="normal" title="CALCULAR">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="calcularPresionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nu6-pK-ohq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -121,6 +124,8 @@
                     <connections>
                         <outlet property="labelAltura" destination="HHf-BW-tix" id="aaT-IS-uSi"/>
                         <outlet property="labelPeso" destination="MDK-9L-tfk" id="Sdr-Li-s36"/>
+                        <outlet property="sliderAltura" destination="KwD-hl-kEq" id="Nnb-cl-LZf"/>
+                        <outlet property="sliderPeso" destination="00x-MV-Ssw" id="fFO-Hm-tDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
