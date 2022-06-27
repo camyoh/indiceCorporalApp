@@ -13,7 +13,7 @@ class CalcularViewController: UIViewController {
     @IBOutlet weak var sliderAltura: UISlider!
     @IBOutlet weak var sliderPeso: UISlider!
     
-    var valorIMC = "0.0"
+    var calcular = Calcular()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,8 @@ class CalcularViewController: UIViewController {
     @IBAction func calcularPresionado(_ sender: UIButton) {
         let altura = sliderAltura.value
         let peso = sliderPeso.value
-        let imc = peso/pow(altura, 2)
-        valorIMC = String(format: "%.1f", imc)
+        
+        calcular.calcularIMC(altura: altura, peso: peso)
         
         performSegue(withIdentifier: "irAResultado", sender: self)
     }
@@ -40,7 +40,7 @@ class CalcularViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "irAResultado" {
             let resultViewController = segue.destination as! ResultViewController
-            resultViewController.valorIMC = valorIMC
+            resultViewController.valorIMC =  calcular.obtenerIMC()
         }
     }
 }
