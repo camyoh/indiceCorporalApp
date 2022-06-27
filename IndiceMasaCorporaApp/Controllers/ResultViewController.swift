@@ -11,12 +11,16 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var labelIMC: UILabel!
     @IBOutlet weak var labelConsejo: UILabel!
     
-    var valorIMC = "0.0"
+    var valorIMC: String?
+    var consejo: String?
+    var color: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         labelIMC.text = valorIMC
+        view.backgroundColor = color
+        labelConsejo.text = consejo
 
     }
     @IBAction func recalcularPresionado(_ sender: UIButton) {

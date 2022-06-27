@@ -41,6 +41,8 @@ class CalcularViewController: UIViewController {
         if segue.identifier == "irAResultado" {
             let resultViewController = segue.destination as! ResultViewController
             resultViewController.valorIMC =  calcular.obtenerIMC()
+            resultViewController.consejo = calcular.darConsejo()
+            resultViewController.color = calcular.obtenerColor()
         }
     }
 }
